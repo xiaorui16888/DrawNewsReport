@@ -1,0 +1,23 @@
+{
+    "category_name": "开发",
+    "platform_name": "开发者头条 ‧ 今日头条",
+    "url": "5VaobmGeAj",
+    "news": [
+        "关于代码质量退化的思考",
+        "美团实时数仓架构演进与建设实践",
+        "深度好文｜实时数仓不用愁，StarRocks+Flink 来解忧！",
+        "leo：从工程化角度出发的脚手架开源工具",
+        "基于事件驱动架构构建微服务第16部分：Azure Active Directory B2C",
+        "基于etcd实现大规模服务治理应用实战",
+        "CNN卷土重来！超越Transformer！FAIR重新设计纯卷积架构：ConvNeXt",
+        "18张图，详解SpringBoot解析yml全流程",
+        "DSTC10开放领域对话评估比赛冠军方法总结",
+        "Java依赖冲突高效解决之道",
+        "干货 | 基于 BDD 理念的 UI 自动化测试在携程度假的应用",
+        "微服务拆分之道",
+        "80抽猫狗湿巾加送2包便携装，只需8.9元！",
+        "关于项目中 Repository 层的思考",
+        "设计模式系列——桥接模式"
+    ],
+    "poster": "/news/poster/5/3"
+}

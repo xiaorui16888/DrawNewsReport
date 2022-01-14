@@ -1,0 +1,23 @@
+{
+    "category_name": "开发",
+    "platform_name": "SegmentFault ‧ 今日热门",
+    "url": "W1VdJZdLQM",
+    "news": [
+        "数字化时代，纯前端表格控件或将成为协同办公的解决方案",
+        "14 张有趣深动图解 FlexBox，好家伙，还不快进收藏夹吃灰！",
+        "如何让你的大文件上传变得又稳又快？",
+        "LeetCode-120-三角形最小路径和",
+        "git进阶（撤销pull、撤销merge、撤销add）",
+        "如何更好管理 Api 接口（续）",
+        "深度剖析Saga分布式事务",
+        "知乎利用 JuiceFS 给 Flink 容器启动加速实践",
+        "【Less】给 CSS 加点料",
+        "Go语言如何高效的进行字符串拼接（6种方式进行对比分析）",
+        "TypeScript 之 Generics",
+        "云原生一探（Packer + Cloud-Init，Vultr + 阿里云）",
+        "自己造一个ReactDOM",
+        "美团主办ICCV2021研讨会及挑战赛，专家齐聚食品分析，论文比赛斩获佳绩",
+        "深度揭秘Netty中的FastThreadLocal为什么比ThreadLocal效率更高？"
+    ],
+    "poster": "/news/poster/5/5"
+}

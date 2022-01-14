@@ -17,6 +17,7 @@ import re
 import os
 import ImageMerge
 import QrCodeUtil
+from Utils import dict2json
 
 nodes = Config.news_nodes
 
@@ -30,11 +31,20 @@ def drawCategoryReport(category_node=0, platform_node=1):
                       'Chrome/55.0.2883.87 Safari/537.36'}
     aaa = requests.get(url, headers=headers).text  # 模拟请求头，访问网页
     title_pattern = re.compile(r'itemid="[0-9]*">(.*?)</a>')  # 正则提取网页中的“今日热议”
-    titles = title_pattern.findall(aaa)[0:15]  # 匹配“今日热议”正则十次
+    titles = title_pattern.findall(aaa)[0:15]  # 匹配“今日热议”正则15次
     print(titles)
     if len(titles) == 0:  # 如果没有爬取到新闻
         return
     platform_name = category_platform['name']
+    # 写入json文件，方便读取
+    data = {
+        'category_name': nodes[category_node]['category'],
+        'platform_name': platform_name,
+        'url': category_platform['url'],
+        'news': titles,
+        'poster': '/news/poster/%s/%s' % (category_node, platform_node)
+    }
+    dict2json('./%s/%s_%s.json' % ('json', category_node, platform_node), data)
 
     # 转换列表准备绘制
     def old_to_new_list(old_list, line_width):
