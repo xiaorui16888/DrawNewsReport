@@ -21,42 +21,6 @@ import QrCodeUtil
 nodes = Config.news_nodes
 
 
-# 参数值
-# 综合0、
-#   知乎热榜0
-#   澎湃新闻·热榜1
-#   百度 ‧ 实时热点2
-#   今日头条 ‧ 头条热榜3
-#   百度知道日报 ‧ Today4
-#   神马搜索 ‧ 热搜榜5
-#   微信 ‧ 热词6
-#   ZAKER ‧ 24小时热榜7
-#   新京报 ‧ 排行8
-# 科技1、
-#   36氪 ‧ 24小时热榜0
-#   少数派 ‧ 热门文章1
-#   IT之家 ‧ 日榜2
-# 娱乐2、
-#   哔哩哔哩 ‧ 全站日榜0
-#   抖音 ‧ 视频榜1
-#   AcFun ‧ 排行榜2
-# 社区3、
-#   吾爱破解 ‧ 今日热帖0
-#   百度贴吧 ‧ 热议榜1
-#   汽车之家 ‧ 论坛精选日报2
-# 财经4、
-#   第一财经 ‧ 头条
-#   雪球 ‧ 今日话题
-#   华尔街见闻 ‧ 日排行
-# 开发5
-#   人人都是产品经理 ‧ 热门文章0
-#   掘金 ‧ 全站本周最热1
-#   开源中国 ‧ 热门资讯2
-#   开发者头条 ‧ 今日头条3
-#   产品100 ‧ 周榜4
-#   SegmentFault ‧ 今日热门5
-#   博客园 ‧ 48小时阅读排行6
-
 # 生成海报
 def drawCategoryReport(category_node=0, platform_node=1):
     category_platform = nodes[category_node]['list'][platform_node]  # 读取节点内容
@@ -66,7 +30,7 @@ def drawCategoryReport(category_node=0, platform_node=1):
                       'Chrome/55.0.2883.87 Safari/537.36'}
     aaa = requests.get(url, headers=headers).text  # 模拟请求头，访问网页
     title_pattern = re.compile(r'itemid="[0-9]*">(.*?)</a>')  # 正则提取网页中的“今日热议”
-    titles = title_pattern.findall(aaa)[0:10]  # 匹配“今日热议”正则十次
+    titles = title_pattern.findall(aaa)[0:15]  # 匹配“今日热议”正则十次
     print(titles)
     if len(titles) == 0:  # 如果没有爬取到新闻
         return
